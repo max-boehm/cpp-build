@@ -1,7 +1,7 @@
 CXX      = g++
 CXXFLAGS = -std=c++17 -Wall -g
 LDFLAGS  =
-LDLIBS   = -lgtest -lgtest_main
+LDLIBS   =
 
 all: hello hello_test
 
@@ -12,7 +12,7 @@ hello: hello.o
 	$(CXX) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
 hello_test: hello_test.o
-	$(CXX) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+	$(CXX) $(LDFLAGS) -o $@ $^ $(LDLIBS) -lgtest -lgtest_main
 
 clean:
 	rm -f hello hello.o hello_test hello_test.o

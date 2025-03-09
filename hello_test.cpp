@@ -5,13 +5,13 @@
 #include <gtest/gtest.h>  // sudo apt install libgtest-dev
 
 
-TEST(myTests, hello_is_runnable) {
+TEST(MyTests, HelloIsRunnable) {
   int result = system("./hello");
   EXPECT_EQ(result, 0);
 }
 
 
-TEST(myTests, hello_output_ok) {
+TEST(MyTests, HelloOutputOk) {
   // Open the command for reading the output
   FILE *fp = popen("./hello", "r");
 

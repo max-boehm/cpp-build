@@ -10,7 +10,7 @@ The code can be built using a `Makefile`
 ```sh
 $ make hello
 g++ -std=c++17 -Wall -g -c -o hello.o hello.cpp
-g++  -o hello hello.o -lgtest -lgtest_main
+g++  -o hello hello.o
 
 $ ./hello
 Hello, World!
@@ -22,7 +22,7 @@ For testing the [GoogleTest](https://google.github.io/googletest/) C++ testing
 framework has been used.
 
 ```sh
-# install gtest library
+# install gtest library and headers
 sudo apt install libgtest-dev
 
 # build the test
@@ -35,16 +35,16 @@ $ ./hello_test
 Running main() from ./googletest/src/gtest_main.cc
 [==========] Running 2 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 2 tests from myTests
-[ RUN      ] myTests.hello_is_runnable
+[----------] 2 tests from MyTests
+[ RUN      ] MyTests.HelloIsRunnable
 Hello, World!
-[       OK ] myTests.hello_is_runnable (3 ms)
-[ RUN      ] myTests.hello_output_ok
-[       OK ] myTests.hello_output_ok (3 ms)
-[----------] 2 tests from myTests (6 ms total)
+[       OK ] MyTests.HelloIsRunnable (5 ms)
+[ RUN      ] MyTests.HelloOutputOk
+[       OK ] MyTests.HelloOutputOk (5 ms)
+[----------] 2 tests from MyTests (11 ms total)
 
 [----------] Global test environment tear-down
-[==========] 2 tests from 1 test suite ran. (6 ms total)
+[==========] 2 tests from 1 test suite ran. (11 ms total)
 [  PASSED  ] 2 tests.
 ```
 
